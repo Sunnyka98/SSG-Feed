@@ -1,0 +1,9 @@
+Title: Page 3
+
+----
+
+Slug: page-3
+
+----
+
+Text: This ist the fourth text.

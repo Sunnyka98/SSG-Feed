@@ -1,25 +1,9 @@
-title: Default Page
+title: 
+  en: Default 
+  de: Standard
+preset: page
 
-columns:
-  main:
-    width: 2/3
-    sections:
-      fields:
-        type: fields
-        fields:
-          text:
-            type: textarea
-            size: huge
-            buttons:
-              - dothings
-  sidebar:
-    width: 1/3
-    sections:
-      fieldtwo:
-        type: fields
-        fields:
-          texttwo:
-            type: textarea
-            size: huge
-            buttons:
-              - dothings
+fields:
+  text:
+    type: textarea
+    size: large
