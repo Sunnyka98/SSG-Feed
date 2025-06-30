@@ -70,7 +70,7 @@ if ($pages != false) {
 $children = $site->children();
 foreach ($children as $child) {
     echo "<a href='" . $child->url() . "/'>" . $child->title() . "</a><br>\n";
-    if($child->hasChildren()){
+    if ($child->hasChildren()) {
         foreach ($child->children() as $grand) {
             echo "-<a href='" . $grand->url() . "/'>" . $grand->title() . "</a><br>\n";
         }

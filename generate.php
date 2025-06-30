@@ -6,7 +6,17 @@ $kirby = kirby();
 $staticSiteGenerator = new JR\StaticSiteGenerator($kirby);
 $moduleStoreMainPage = $kirby->page("module-store");
 $moduleStoreRoutes = getChildrenInformation($moduleStoreMainPage);
-var_dump($moduleStoreRoutes);
+$customRoutes = array_merge($moduleStoreRoutes, [[
+        "path"  => "feed-de.xml",
+        "route" => "de/feed",
+        "language" => "de",
+    ],
+    [
+        "path"  => "feed-en.xml",
+        "route" => "en/feed",
+        "language" => "en",
+    ],]);
+var_dump($customRoutes);
 function getChildrenInformation($parent): array
 {
     $information = [];
@@ -31,7 +41,7 @@ function getChildrenInformation($parent): array
     return $information;
 }
 
-$staticSiteGenerator->setCustomRoutes($moduleStoreRoutes);
+$staticSiteGenerator->setCustomRoutes($customRoutes);
 $files = $staticSiteGenerator->generate('./build');
 
 // For debugging we want to display which pages were rendered
